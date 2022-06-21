@@ -14,22 +14,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (videosController.videoList.isEmpty) {
-      return Scaffold(
-        body: const Center(child: Text('No videos yet')),
-        floatingActionButton: IconButton(
-            icon: const Icon(
-              Icons.video_camera_front_rounded,
-              color: Colors.orangeAccent,
-              size: 40,
-            ),
-            onPressed: () {
-              Get.to(
-                const CameraPage(),
-              );
-            }),
-      );
-    } else {
+    {
       return Scaffold(
         body: Obx(() => ListView.builder(
               itemCount: videosController.videoList.length,
