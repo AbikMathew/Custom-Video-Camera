@@ -35,7 +35,8 @@ class HomePage extends StatelessWidget {
                     },
                   )),
             )),
-        floatingActionButton: IconButton(
+        floatingActionButton: TextButton.icon(
+          label: const Text('Capture Video'),
             icon: const Icon(
               Icons.video_camera_front_rounded,
               color: Colors.orangeAccent,
