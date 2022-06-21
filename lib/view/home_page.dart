@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
+import 'package:path/path.dart';
 
 import '../controllers/video_controller.dart';
 
@@ -16,10 +17,15 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     {
       return Scaffold(
+        appBar: AppBar(
+          title: const Text('Custom Camera'),
+          elevation: 0,
+          backgroundColor: Colors.orangeAccent,
+        ),
         body: Obx(() => ListView.builder(
               itemCount: videosController.videoList.length,
               itemBuilder: ((context, index) => ListTile(
-                    title: Text(videosController.videoList[index].toString()),
+                    title: Text(basename(videosController.videoList[index].toString())),
                     onTap: () {
                       Get.to(
                         VideoPage(

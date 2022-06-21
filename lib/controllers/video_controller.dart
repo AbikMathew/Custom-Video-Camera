@@ -9,8 +9,5 @@ class VideosController extends GetxController {
   addToLocalList(String filePath) {
     videoList.add(filePath);
     update();
-    print('kitttiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii');
-    print(videoList.toString());
   }
-
 }
