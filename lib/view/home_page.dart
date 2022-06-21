@@ -1,8 +1,6 @@
 import 'package:custom_camera/view/camera_page.dart';
 import 'package:custom_camera/view/video_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import 'package:path/path.dart';
 
@@ -25,7 +23,7 @@ class HomePage extends StatelessWidget {
         body: Obx(() => ListView.builder(
               itemCount: videosController.videoList.length,
               itemBuilder: ((context, index) => ListTile(
-                    title: Text(basename(videosController.videoList[index].toString())),
+                    title: Text(basename(videosController.videoList[index])),
                     onTap: () {
                       Get.to(
                         VideoPage(
